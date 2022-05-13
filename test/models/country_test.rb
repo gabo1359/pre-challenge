@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: countries
@@ -18,7 +20,7 @@
 #
 #  fk_rails_...  (continent_id => continents.id)
 #
-require "test_helper"
+require 'test_helper'
 
 class CountryTest < ActiveSupport::TestCase
   # test "the truth" do

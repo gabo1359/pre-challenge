@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: cities
@@ -18,7 +20,7 @@
 #
 #  fk_rails_...  (country_id => countries.id)
 #
-require "test_helper"
+require 'test_helper'
 
 class CityTest < ActiveSupport::TestCase
   # test "the truth" do

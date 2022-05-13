@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: geographic_icons
@@ -19,7 +21,7 @@
 #
 #  fk_rails_...  (city_id => cities.id)
 #
-require "test_helper"
+require 'test_helper'
 
 class GeographicIconTest < ActiveSupport::TestCase
   # test "the truth" do

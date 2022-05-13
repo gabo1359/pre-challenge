@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: continents
@@ -16,8 +18,7 @@ class Continent < ApplicationRecord
   validate :valid_continent?
 
   def valid_continent?
-    unless %w(America Asia Africa Europe Oceania Antarctica).include?(denomination.downcase.upcase_first)
-      errors.add(:denomination, "It's not a valid continent")
-    end
+    return if %w[America Asia Africa Europe Oceania Antarctica].include?(denomination.downcase.upcase_first)
+    errors.add(:denomination, "it's not a valid continent")
   end
 end
