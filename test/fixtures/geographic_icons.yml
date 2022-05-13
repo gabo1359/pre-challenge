@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  denomination: MyString
+  date_of_creation: 2022-05-12 18:04:55
+  height: 1.5
+  history: MyText
+  city: one
+
+two:
+  denomination: MyString
+  date_of_creation: 2022-05-12 18:04:55
+  height: 1.5
+  history: MyText
+  city: two
