@@ -1,0 +1,17 @@
+Style/ClassAndModuleChildren:
+  Enabled: false
+Style/Documentation:
+  Enabled: false
+Layout/HashAlignment:
+  Enabled: false
+Metrics/BlockLength:
+  Enabled: false
+AllCops:
+  Exclude:
+    - 'test/**/**'
+    - 'bin/**/**'
+    - 'db/**/**'
+    - 'config/**/**'
+    - 'Gemfile'
+    - 'Gemfile.lock'
+    - 'Rakefile'

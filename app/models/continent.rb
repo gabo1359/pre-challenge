@@ -19,6 +19,7 @@ class Continent < ApplicationRecord
 
   def valid_continent?
     return if %w[America Asia Africa Europe Oceania Antarctica].include?(denomination.downcase.upcase_first)
+
     errors.add(:denomination, "it's not a valid continent")
   end
 end
