@@ -8,8 +8,8 @@ class GeographicIcons::Show < BaseService
   end
 
   def call
-    city = City.find_by(id: geographic_icon.city_id)
-    country = Country.find_by(id: city.country_id)
+    city = City.find(geographic_icon.city_id)
+    country = Country.find(city.country_id)
     geographic_icon.as_json.merge(city: city, country: country)
   end
 end

@@ -6,6 +6,8 @@ Layout/HashAlignment:
   Enabled: false
 Metrics/BlockLength:
   Enabled: false
+Lint/MissingSuper:
+  Enabled: false
 AllCops:
   Exclude:
     - 'test/**/**'

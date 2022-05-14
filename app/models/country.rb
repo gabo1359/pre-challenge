@@ -22,7 +22,7 @@
 #
 class Country < ApplicationRecord
   belongs_to :continent
-  has_many :cities
+  has_many :cities, dependent: :destroy
   has_many :geographic_icons, through: :cities
 
   validates :denomination, presence: true, length: { maximum: 50 }
