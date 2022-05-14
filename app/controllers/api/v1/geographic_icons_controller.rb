@@ -1,37 +1,32 @@
 # frozen_string_literal: true
 
 class Api::V1::GeographicIconsController < ApplicationController
-  before_action :set_geographic_icon, except: [:index, :create, :update]
-
   def index
     @geographic_icons = GeographicIcon.all
     render json: @geographic_icons
   end
 
   def show
+    @geographic_icon = GeographicIcons::Show.call(id: params[:id])
     render json: @geographic_icon
   end
 
   def create
     @geographic_icon = GeographicIcons::Create.call(set_geographic_icon_params)
-    render json: @geographic_icon
+    render json: { data: @geographic_icon }, status: :created
   end
 
   def update
     @geographic_icon = GeographicIcons::Update.call(set_geographic_icon_params.merge(id: params[:id]))
-    render json: @geographic_icon
+    render json: { data: @geographic_icon }, status: :created
   end
 
   def destroy
-    @geographic_icon.destroy
+    GeographicIcons::Destroy.call(id: params[:id])
     head :no_content
   end
 
   private
-
-  def set_geographic_icon
-    @geographic_icon = GeographicIcon.find(params[:id])
-  end
 
   def set_geographic_icon_params
     params.require(:geographic_icon)
