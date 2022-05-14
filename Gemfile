@@ -47,7 +47,7 @@ group :development do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
   gem 'annotate'
+  gem 'rubocop-rails', require: false
 end
 
-gem 'rubocop-rails', require: false
 gem 'active_model_serializers', '~> 0.10.0'

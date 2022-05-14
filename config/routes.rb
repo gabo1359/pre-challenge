@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :geographic_icons
       resources :cities
+      resources :countries
     end
   end
 end

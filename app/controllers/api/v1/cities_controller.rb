@@ -3,12 +3,12 @@
 class Api::V1::CitiesController < ApplicationController
   def index
     @cities = City.all
-    render json: @cities
+    render json: { data: @cities }
   end
 
   def show
     @city = Cities::Show.call(id: params[:id])
-    render json: @city
+    render json: { data: @city }
   end
 
   def create

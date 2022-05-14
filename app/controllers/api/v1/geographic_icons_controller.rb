@@ -3,12 +3,12 @@
 class Api::V1::GeographicIconsController < ApplicationController
   def index
     @geographic_icons = GeographicIcon.all
-    render json: @geographic_icons
+    render json: { data: @geographic_icons }
   end
 
   def show
     @geographic_icon = GeographicIcons::Show.call(id: params[:id])
-    render json: @geographic_icon
+    render json: { data: @geographic_icon }
   end
 
   def create
