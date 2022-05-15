@@ -48,6 +48,7 @@ group :development do
   # gem "spring"
   gem 'annotate'
   gem 'rubocop-rails', require: false
+  gem 'faker'
 end
 
 gem 'active_model_serializers', '~> 0.10.0'
