@@ -10,6 +10,7 @@ Rails.application.routes.draw do
       resources :geographic_icons
       resources :cities
       resources :countries
+      resources :continents
     end
   end
 end

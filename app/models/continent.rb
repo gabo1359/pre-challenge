@@ -14,7 +14,7 @@ class Continent < ApplicationRecord
   has_many :cities, through: :countries
   has_many :geographic_icons, through: :countries
 
-  validates :denomination, presence: true, length: { maximum: 50 }
+  validates :denomination, presence: true, uniqueness: true, length: { maximum: 50 }
   validate :valid_continent?
 
   def valid_continent?
