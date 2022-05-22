@@ -52,3 +52,7 @@ group :development do
 end
 
 gem 'active_model_serializers', '~> 0.10.0'
+
+# Authentication
+gem 'devise' 
+gem 'devise-jwt'
