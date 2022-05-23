@@ -29,6 +29,6 @@ class Api::V1::CitiesController < ApplicationController
   private
 
   def set_city_params
-    params.require(:city).permit(:denomination, :population, :land_area, :country_id)
+    params.require(:city).permit(:denomination, :population, :land_area, :country_id, :image)
   end
 end

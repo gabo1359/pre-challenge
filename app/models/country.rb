@@ -24,6 +24,7 @@ class Country < ApplicationRecord
   belongs_to :continent
   has_many :cities, dependent: :destroy
   has_many :geographic_icons, through: :cities
+  has_one_attached :image
 
   validates :denomination, presence: true, uniqueness: true, length: { maximum: 50 }
   validates :population, presence: true, numericality: { only_integer: true }

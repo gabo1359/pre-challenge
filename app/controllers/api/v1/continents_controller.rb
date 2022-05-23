@@ -29,6 +29,6 @@ class Api::V1::ContinentsController < ApplicationController
   private
 
   def set_continent_params
-    params.require(:continent).permit(:denomination)
+    params.require(:continent).permit(:denomination, :image)
   end
 end

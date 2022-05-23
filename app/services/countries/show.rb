@@ -8,6 +8,7 @@ class Countries::Show < BaseService
   end
 
   def call
-    country.as_json.merge(cities: country.cities)
+    image = country.image.attached? ? country.image.url : 'Has no image attached'
+    country.as_json.merge(image: image, cities: country.cities)
   end
 end

@@ -56,3 +56,4 @@ gem 'active_model_serializers', '~> 0.10.0'
 # Authentication
 gem 'devise' 
 gem 'devise-jwt'
+gem "aws-sdk-s3", require: false
