@@ -8,6 +8,7 @@ class Continents::Show < BaseService
   end
 
   def call
-    continent.as_json.merge(countries: continent.countries)
+    image = continent.image.attached? ? continent.image.url : 'Has no image attached'
+    continent.as_json.merge(image: image, countries: continent.countries)
   end
 end

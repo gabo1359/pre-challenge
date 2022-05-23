@@ -23,6 +23,7 @@
 #
 class GeographicIcon < ApplicationRecord
   belongs_to :city
+  has_one_attached :image
 
   validates :denomination, presence: true, length: { maximum: 50 }
   validates :date_of_creation, format: { with: /\d{4}(-(\d){2}){2}/, message: 'yyyy-mm-dd format' }

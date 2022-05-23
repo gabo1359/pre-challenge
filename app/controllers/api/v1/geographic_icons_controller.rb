@@ -30,6 +30,6 @@ class Api::V1::GeographicIconsController < ApplicationController
 
   def set_geographic_icon_params
     params.require(:geographic_icon)
-          .permit(:denomination, :height, :history, :date_of_creation, :city_id)
+          .permit(:denomination, :height, :history, :date_of_creation, :city_id, :image)
   end
 end
