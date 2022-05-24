@@ -49,6 +49,7 @@ group :development do
   gem 'annotate'
   gem 'rubocop-rails', require: false
   gem 'faker'
+  gem "letter_opener"
 end
 
 gem 'active_model_serializers', '~> 0.10.0'
